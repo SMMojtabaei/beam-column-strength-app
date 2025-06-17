@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beam-Column Strength Predictor</title>
+</head>
+<body>
+    <h2>Enter Parameters</h2>
+    <form method="post">
+        h/t: <input type="text" name="h_t"><br>
+        b/t: <input type="text" name="b_t"><br>
+        c/t: <input type="text" name="c_t"><br>
+        kL/r<sub>y</sub>: <input type="text" name="kL_ry"><br>
+        λ<sub>C</sub> / λ<sub>F</sub>: <input type="text" name="SlenC_SlenF"><br>
+        Ex (mm): <input type="text" name="Ex"><br>
+        Ey (mm): <input type="text" name="Ey"><br>
+        r<sub>x</sub>/r<sub>y</sub>: <input type="text" name="rx_ry"><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction is not none %}
+        <h3>Predicted P/Py: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
